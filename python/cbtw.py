@@ -2,7 +2,7 @@
 
 import json
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     data = json.loads(input())
     solution = {
         "0": "0",

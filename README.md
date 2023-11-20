@@ -26,14 +26,69 @@ The program takes a JSON as input (from stdin) and output a JSON (to stdout)
 The input looks like:
 
 ```JSON
-
-
+{
+    "consultants": [
+        {
+            "id": "0",
+            "name": "Andrew Williams",
+            "competences": [
+                "python",
+                "java",
+                "rust"
+            ]
+        },
+        {
+            "id": "1",
+            "name": "Robert Graham DVM",
+            "competences": [
+                "Git"
+            ]
+        },
+        {
+            "id": "2",
+            "name": "Jason Russell",
+            "competences": [
+                "java",
+                "rust",
+                "Git"
+            ]
+        }
+    ],
+    "missions": [
+        {
+            "id": "0",
+            "client": "Sanchez-Lopez",
+            "competences": [
+                "French",
+                "TDD",
+                "python",
+            ],
+            "rate": 276
+        },
+        {
+            "id": "1",
+            "client": "Spencer and Sons",
+            "competences": [
+                "Dutch",
+                "SQL",
+                "rust"
+            ],
+            "rate": 552
+        },
+    ]
+}
 ```
 
 The output looks lie
 
 ```JSON
+{
+  "0": "0",
+  "2": "4"
+}
 ```
 
 ## solution testing
 
+Boiler plate is provided for python. If you use another language, contact me
+and I'll add the corresponding boiler plate.
