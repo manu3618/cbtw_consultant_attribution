@@ -37,6 +37,3 @@ The output looks lie
 
 ## solution testing
 
-Whatever the language, the solution should be an executable file put in
-`/solution`
-See `/build_solution.sh` for more information
