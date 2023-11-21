@@ -30,7 +30,7 @@ def compute_money(data, attributions):
         consultant = next(c for c in consultants if c["id"] == consultant_id)
         mission = next(m for m in missions if m["id"] == mission_id)
         competence_nb = len(
-            [c for c in consultant["competences"] if c in mission["competences"]]
+            [c for c in consultant["skills"] if c in mission["skills"]]
         )
-        money += competence_nb / len(mission["competences"]) * mission["rate"]
+        money += competence_nb / len(mission["skills"]) * mission["rate"]
     return money

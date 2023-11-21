@@ -31,7 +31,7 @@ def consultant_generator(consultant_nb=10):
         yield {
             "id": str(n),
             "name": NAME_GENERATOR.name(),
-            "competences": list(set(choices(COMPETENCES, k=randint(1, 10)))),
+            "skills": list(set(choices(COMPETENCES, k=randint(1, 10)))),
         }
 
 
@@ -40,7 +40,7 @@ def mission_generator(mission_nb=10):
         yield {
             "id": str(n),
             "client": NAME_GENERATOR.company(),
-            "competences": list(set(choices(COMPETENCES, k=randint(1, 10)))),
+            "skills": list(set(choices(COMPETENCES, k=randint(1, 10)))),
             "rate": 12 * randint(10, 80),
         }
 
@@ -82,9 +82,9 @@ def get_max_match(consultants, missions):
 def get_money(consultant, mission):
     """Compute the money given the consultant and the mission"""
     competence_nb = len(
-        [c for c in consultant["competences"] if c in mission["competences"]]
+        [c for c in consultant["skills"] if c in mission["skills"]]
     )
-    return competence_nb / len(mission["competences"]) * mission["rate"]
+    return competence_nb / len(mission["skills"]) * mission["rate"]
 
 
 def compute_money(data, attributions):

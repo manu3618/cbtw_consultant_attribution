@@ -34,7 +34,7 @@ The input looks like:
         {
             "id": "0",
             "name": "Andrew Williams",
-            "competences": [
+            "skills": [
                 "python",
                 "java",
                 "rust"
@@ -43,14 +43,14 @@ The input looks like:
         {
             "id": "1",
             "name": "Robert Graham DVM",
-            "competences": [
+            "skills": [
                 "Git"
             ]
         },
         {
             "id": "2",
             "name": "Jason Russell",
-            "competences": [
+            "skills": [
                 "java",
                 "rust",
                 "Git"
@@ -61,7 +61,7 @@ The input looks like:
         {
             "id": "0",
             "client": "Sanchez-Lopez",
-            "competences": [
+            "skills": [
                 "French",
                 "TDD",
                 "python",
@@ -71,7 +71,7 @@ The input looks like:
         {
             "id": "1",
             "client": "Spencer and Sons",
-            "competences": [
+            "skills": [
                 "Dutch",
                 "SQL",
                 "rust"
@@ -95,11 +95,14 @@ The output contains a mapping `{consultant_id: mission_id}`
 
 ## solution testing
 
-Boiler plate is provided for python. If you use another language, contact me
+Boiler plate is provided for python.
+Complete the file `python/cbtw.py`.
+If you use another language, contact me
 and I'll add the corresponding boiler plate.
 Github actions run tests for you when you push your code.
+See the github actions to know how your code performed.
 
 Several steps have to be achieved:
 
-* step 1: have a valid solution, i.e. make money
+* step 1: have a valid solution, i.e. make money.
 * step 2: make as much money as possible.
