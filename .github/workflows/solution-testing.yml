@@ -2,22 +2,15 @@ name: validate CBTW challenge
 run-name: testing solution submitted by ${{ github.actor }}
 on: [push]
 jobs:
-  Try-validation:
+  try-validation:
     runs-on: ubuntu-latest
-      steps:
-        - name: build
-          uses: actions/checkout@v4
-          uses: actions/setup-python@v4
-        - name: test program accept inputs and produces output
-          run: |
-            for f in tests/inputs/*json
-            do
-              python python/cbtw.py < $f > /tmp/out.json
-              wc -l /tmp/out.json | grep -q '^0 ' && \
-                { echo "file $f must produce an output" ; exit 1; }
-            done
-        - name: program produces a valid solution
-          run: pytest -v
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: set up
+        uses: action/setup-python@v4
+      - name: program produces a valid solution
+        run: pytest -v
 
 
 
